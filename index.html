@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Present for Ollie</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const present = document.querySelector(".present");
+        const mainText = document.getElementById("mainText");
+        const subText = document.getElementById("subText");
+
+        present.addEventListener("click", () => {
+          mainText.textContent = "hell naw";
+          subText.textContent = "no present for you";
+          present.style.animation = "none";
+          present.style.transform = "scale(0.95)";
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <main class="wrap">
+      <h1 class="title">A Little Surprise 🎁</h1>
+      <p class="sub">Here’s your present — it’s got your name right on it.</p>
+
+      <section class="card" aria-label="Present card">
+        <div class="present-wrap">
+          <div
+            class="present"
+            role="img"
+            aria-label="A gift present with a label that says Present for Ollie"
+          >
+            <div class="lid"></div>
+            <div class="box"></div>
+            <div class="ribbon-v"></div>
+            <div class="ribbon-h"></div>
+
+            <div class="bow" aria-hidden="true">
+              <div class="knot"></div>
+            </div>
+
+            <div class="label" id="presentLabel">
+              <strong id="mainText">Present for Ollie</strong>
+              <span id="subText">Open me ✨</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer">Made with pure HTML + CSS.</div>
+      </section>
+    </main>
+  </body>
+</html>
